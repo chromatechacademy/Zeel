@@ -36,8 +36,6 @@ public class AmazonTest {
         // Printing actualPageName
         System.out.println(actualPageName);
 
-        System.out.println("Hello world");
-
     }
 
 }
