@@ -14,13 +14,19 @@ public class ChromaTest {
 
         WebDriver driver = new ChromeDriver();
 
+        // Navigating to Chroma Tech Admin login site
         driver.get("https://chroma.mexil.it/site/login");
 
-        driver.findElement(By.cssSelector("input[id='form-username']")).sendKeys("admin@admin.com");
+        // Entering username in username textbox
+        driver.findElement(By.cssSelector("input[id='form-username']")).sendKeys("general@teacher.com");
 
+        // Entering password in password textbox
         driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("123456");
 
-        driver.findElement(By.xpath("//button[@class='btn']")).click();
+        // Clicking on 'Sign In' button
+        driver.findElement(By.xpath("//form/button")).click();
+
+        
 
     }
 
