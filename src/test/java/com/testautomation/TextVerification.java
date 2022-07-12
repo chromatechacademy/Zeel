@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
@@ -69,6 +70,8 @@ public class TextVerification {
 
         // Sending admission number
         driver.findElement(By.xpath("//input[@id='admission_no']")).sendKeys("123456");
+
+      
     }
 
 }
