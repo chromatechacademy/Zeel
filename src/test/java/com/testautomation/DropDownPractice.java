@@ -2,7 +2,9 @@ package com.testautomation;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -43,7 +45,20 @@ public class DropDownPractice {
         // Clicking on 'Student details'
         driver.findElement(By.partialLinkText("Student Details")).click();
 
-        driver.quit();
+        // Storing class drop down into classDropDown variable
+        WebElement classDropDown = driver.findElement(By.xpath("//select[@name='class_id']"));
+
+        // Creating an object of Select class to get handle of the static drop down
+        Select dropDown = new Select(classDropDown);
+
+        // Selecting by visible text
+        dropDown.selectByVisibleText("SDET");
+        
+        dropDown.selectByIndex(0);
+
+        dropDown.selectByValue("11");
+
+        // driver.quit();
 
     }
 
