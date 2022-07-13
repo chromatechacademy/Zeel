@@ -36,7 +36,7 @@ public class ExpediaPractice {
         // Adding adults
         WebElement addButton = driver.findElement(By.xpath(
                 "//div[@class='uitk-layout-flex uitk-layout-flex-align-items-center uitk-layout-flex-justify-content-space-between uitk-step-input adultStepInput uitk-step-input-mounted']//button[2]"));
-
+      
         for (int i = 0; i <= 4; i++) {
             addButton.click();
         }
