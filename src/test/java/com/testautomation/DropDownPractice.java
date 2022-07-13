@@ -53,11 +53,12 @@ public class DropDownPractice {
 
         // Selecting by visible text
         dropDown.selectByVisibleText("SDET");
-        
+
         dropDown.selectByIndex(0);
 
         dropDown.selectByValue("11");
 
+        // Commenting out driver.quit so you can see drop down values changing
         // driver.quit();
 
     }
