@@ -32,6 +32,19 @@ public class FindElementsPractice {
 
         System.out.println(numberOfLinks.size());
 
+        for (WebElement namesOfLinks : numberOfLinks) {
+
+            // System.out.println(namesOfLinks.getText());
+
+            if (namesOfLinks.getText().contentEquals("Flights")) {
+
+                namesOfLinks.click();
+
+                break;
+            }
+
+        }
+
     }
 
 }
