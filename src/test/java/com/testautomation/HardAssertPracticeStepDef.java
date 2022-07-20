@@ -1,5 +1,6 @@
 package com.testautomation;
 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -7,13 +8,14 @@ import org.testng.Assert;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class HardAssertPractice {
+public class HardAssertPracticeStepDef {
 
     public static void main(String[] args) {
 
         /**
          * HARD ASSERT PRACTICE
          */
+
 
         WebDriverManager.chromedriver().setup();
 
@@ -32,6 +34,9 @@ public class HardAssertPractice {
 
         // Entering username in username textbox
         driver.findElement(By.cssSelector("input[id='form-username']")).sendKeys("general@teacher.com");
+
+
+
 
         // Entering password in password textbox
         driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("123456");
