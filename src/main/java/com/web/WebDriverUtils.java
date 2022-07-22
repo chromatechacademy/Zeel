@@ -1,5 +1,7 @@
 package com.web;
 
+import java.time.Duration;
+
 import com.utils.ConfigReader;
 import com.utils.FrameworkConstants;
 
@@ -36,7 +38,15 @@ public class WebDriverUtils {
         }
 
         driver.manage().window().maximize();
+        driver.manage().deleteAllCookies();
 
+        /** Setting an implicit wait */
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+
+    }
+
+    public static void tearDown() {
+        driver.quit();
     }
 
 }
