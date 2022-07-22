@@ -1,34 +1,24 @@
 package com.stepDefinitions;
 
-import com.constants.ApplicationConstants;
-import com.pages.LoginPage;
-import com.web.WebDriverUtils;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 
 public class LoginStepDef {
 
-    public static void main(String[] args) {
+    @Given("user is on the login page")
+    public void user_is_on_the_login_page() {
 
-        /** Calling setUp() method from WebDriverUtils class */
-        WebDriverUtils.setUp();
+    }
 
-        /** Initializing LoginPage class */
-        LoginPage obj = new LoginPage();
+    @When("user logs in with valid credentials")
+    public void user_logs_in_with_valid_credentials() {
 
-        /** Navigating to the Chrome Tech URL */
-        WebDriverUtils.driver.get(ApplicationConstants.APPLICATION_URL);
+    }
 
-        /** Sending username to username text box */
-        obj.usernameTextBox.sendKeys(ApplicationConstants.USERNAME);
-
-        /** Sending password to password text box */
-        obj.passwordTextBox.sendKeys(ApplicationConstants.PASSWORD);
-
-        /** Clicking on Sign In button */
-        obj.signInButton.click();
-
-        /** Quitting browser session */
-        WebDriverUtils.driver.quit();
-
+    @Then("user is directed to home page")
+    public void user_is_directed_to_home_page() {
+        
     }
 
 }

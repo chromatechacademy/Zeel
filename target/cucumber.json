@@ -1,0 +1,68 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-07-22T01:51:45.361Z",
+        "line": 7,
+        "name": "Login with valid credentials",
+        "description": "",
+        "id": "login-scenarios;login-with-valid-credentials",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 414375,
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "user is on the login page",
+            "match": {
+              "location": "LoginStepDef.user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5375,
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "user logs in with valid credentials",
+            "match": {
+              "location": "LoginStepDef.user_logs_in_with_valid_credentials()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3250,
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "user is directed to home page",
+            "match": {
+              "location": "LoginStepDef.user_is_directed_to_home_page()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@chroma"
+          },
+          {
+            "name": "@Smoke"
+          }
+        ]
+      }
+    ],
+    "name": "Login Scenarios",
+    "description": "Description: This feature file contains Chroma Tech School Management System Login Scenarios",
+    "id": "login-scenarios",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/com/features/login.feature",
+    "tags": []
+  }
+]
