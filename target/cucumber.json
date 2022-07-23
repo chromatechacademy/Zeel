@@ -3,47 +3,85 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-07-22T01:51:45.361Z",
-        "line": 7,
+        "start_timestamp": "2022-07-23T01:55:44.557Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3241333625,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.start()"
+            }
+          }
+        ],
+        "line": 6,
         "name": "Login with valid credentials",
         "description": "",
         "id": "login-scenarios;login-with-valid-credentials",
+        "after": [
+          {
+            "result": {
+              "duration": 123826500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.end()"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 414375,
-              "status": "skipped"
+              "duration": 1517598250,
+              "status": "passed"
             },
-            "line": 8,
-            "name": "user is on the login page",
+            "line": 7,
+            "name": "a teacher is on the CTSMS login page",
             "match": {
-              "location": "LoginStepDef.user_is_on_the_login_page()"
+              "location": "LoginStepDef.a_teacher_is_on_the_CTSMS_login_page()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 5375,
-              "status": "skipped"
+              "duration": 16944153417,
+              "status": "passed"
             },
-            "line": 9,
-            "name": "user logs in with valid credentials",
+            "line": 8,
+            "name": "the teacher logs in with username \"general@teacher.com\" and password \"123456\"",
             "match": {
-              "location": "LoginStepDef.user_logs_in_with_valid_credentials()"
+              "arguments": [
+                {
+                  "val": "\"general@teacher.com\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"123456\"",
+                  "offset": 69
+                }
+              ],
+              "location": "LoginStepDef.the_teacher_logs_in_with_username_and_password(String,String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 3250,
-              "status": "skipped"
+              "duration": 626514375,
+              "status": "passed"
             },
-            "line": 10,
-            "name": "user is directed to home page",
+            "line": 9,
+            "name": "the teacher should be succesfully logged in and page title is \"Chroma Tech Academy\"",
             "match": {
-              "location": "LoginStepDef.user_is_directed_to_home_page()"
+              "arguments": [
+                {
+                  "val": "\"Chroma Tech Academy\"",
+                  "offset": 62
+                }
+              ],
+              "location": "LoginStepDef.the_teacher_should_be_succesfully_logged_in_and_page_title_is(String)"
             },
             "keyword": "Then "
           }
@@ -59,7 +97,7 @@
       }
     ],
     "name": "Login Scenarios",
-    "description": "Description: This feature file contains Chroma Tech School Management System Login Scenarios",
+    "description": "    Description: This feature file contains Chroma Tech School Management System Login Scenarios",
     "id": "login-scenarios",
     "keyword": "Feature",
     "uri": "file:src/test/java/com/features/login.feature",
