@@ -16,8 +16,13 @@ public class LoginPage {
     @FindBy(xpath = "//input[@placeholder='Password']")
     public WebElement passwordTextBox;
 
+    /** Sign In button */
     @FindBy(xpath = "//button[normalize-space()='Sign In']")
     public WebElement signInButton;
+
+    /** Invalid username or password text box */
+    @FindBy(xpath = "//div[normalize-space()='Invalid Username or Password']")
+    public WebElement invalidUsernameOrPasswordMessage;
 
     public LoginPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);

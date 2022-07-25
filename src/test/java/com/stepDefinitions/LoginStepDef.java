@@ -1,10 +1,10 @@
 package com.stepDefinitions;
 
+import org.testng.Assert;
+
 import com.constants.ApplicationConstants;
 import com.pages.LoginPage;
 import com.web.WebDriverUtils;
-
-import org.testng.Assert;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -22,12 +22,10 @@ public class LoginStepDef {
     }
 
     @When("the teacher logs in with username {string} and password {string}")
-    public void the_teacher_logs_in_with_username_and_password(String username, String password)
-            throws InterruptedException {
+    public void the_teacher_logs_in_with_username_and_password(String username, String password) {
 
         loginPage.usernameTextBox.sendKeys(username);
         loginPage.passwordTextBox.sendKeys(password);
-        Thread.sleep(3000);
         loginPage.signInButton.click();
 
     }
@@ -37,7 +35,18 @@ public class LoginStepDef {
 
         String actualPageTitle = WebDriverUtils.driver.getTitle();
 
-        Assert.assertTrue(actualPageTitle.contentEquals(expectedPageTitle));
+        Assert.assertTrue(expectedPageTitle.contentEquals(actualPageTitle));
+
+    }
+
+    @When("a user attempts to login with invalid credentials such as username {string} and password {string}")
+    public void a_user_attempts_to_login_with_invalid_credentials_such_as_username_and_password(String invalidUsername,
+            String invalidPassword) {
+
+        loginPage.usernameTextBox.sendKeys(invalidUsername);
+        loginPage.passwordTextBox.sendKeys(invalidPassword);
+        loginPage.signInButton.click();
+
     }
 
 }

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="22.456108">
-    <testcase classname="Login Scenarios" name="Login with valid credentials" time="22.456108">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="4.454381">
+    <testcase classname="Login Scenarios" name="Invalid Credentials login attempt" time="4.454381">
         <system-out><![CDATA[Given a teacher is on the CTSMS login page..................................passed
-When the teacher logs in with username "general@teacher.com" and password "123456".passed
-Then the teacher should be succesfully logged in and page title is "Chroma Tech Academy".passed
+When a user attempts to login with invalid credentials such as username "test@fakeemail.com" and password "fakepassword".passed
 ]]></system-out>
     </testcase>
 </testsuite>

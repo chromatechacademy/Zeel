@@ -3,11 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-07-23T01:55:44.557Z",
+        "start_timestamp": "2022-07-25T23:46:54.222Z",
         "before": [
           {
             "result": {
-              "duration": 3241333625,
+              "duration": 2405806208,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 6,
-        "name": "Login with valid credentials",
+        "line": 13,
+        "name": "Invalid Credentials login attempt",
         "description": "",
-        "id": "login-scenarios;login-with-valid-credentials",
+        "id": "login-scenarios;invalid-credentials-login-attempt",
         "after": [
           {
             "result": {
-              "duration": 123826500,
+              "duration": 107286667,
               "status": "passed"
             },
             "match": {
@@ -35,10 +35,10 @@
         "steps": [
           {
             "result": {
-              "duration": 1517598250,
+              "duration": 1476869375,
               "status": "passed"
             },
-            "line": 7,
+            "line": 14,
             "name": "a teacher is on the CTSMS login page",
             "match": {
               "location": "LoginStepDef.a_teacher_is_on_the_CTSMS_login_page()"
@@ -47,43 +47,25 @@
           },
           {
             "result": {
-              "duration": 16944153417,
+              "duration": 463188583,
               "status": "passed"
             },
-            "line": 8,
-            "name": "the teacher logs in with username \"general@teacher.com\" and password \"123456\"",
+            "line": 15,
+            "name": "a user attempts to login with invalid credentials such as username \"test@fakeemail.com\" and password \"fakepassword\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"general@teacher.com\"",
-                  "offset": 34
+                  "val": "\"test@fakeemail.com\"",
+                  "offset": 67
                 },
                 {
-                  "val": "\"123456\"",
-                  "offset": 69
+                  "val": "\"fakepassword\"",
+                  "offset": 101
                 }
               ],
-              "location": "LoginStepDef.the_teacher_logs_in_with_username_and_password(String,String)"
+              "location": "LoginStepDef.a_user_attempts_to_login_with_invalid_credentials_such_as_username_and_password(String,String)"
             },
             "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 626514375,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "the teacher should be succesfully logged in and page title is \"Chroma Tech Academy\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Chroma Tech Academy\"",
-                  "offset": 62
-                }
-              ],
-              "location": "LoginStepDef.the_teacher_should_be_succesfully_logged_in_and_page_title_is(String)"
-            },
-            "keyword": "Then "
           }
         ],
         "tags": [
@@ -91,7 +73,7 @@
             "name": "@chroma"
           },
           {
-            "name": "@Smoke"
+            "name": "@Progression"
           }
         ]
       }
