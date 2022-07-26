@@ -13,8 +13,8 @@ import cucumber.api.junit.Cucumber;
         "pretty" }, 
         features = "src/test/java/com/features", 
         glue = "com.stepDefinitions", 
-        tags = "@Progression", 
-        dryRun = true, 
+        tags = "@Smoke", 
+        dryRun = false, 
         monochrome = true, 
         strict = true)
 

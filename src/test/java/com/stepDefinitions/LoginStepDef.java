@@ -55,6 +55,18 @@ public class LoginStepDef {
         String actualInvalidLoginMessage = loginPage.invalidUsernameOrPasswordMessage.getText();
 
         System.out.println(actualInvalidLoginMessage);
+
+        Assert.assertTrue(actualInvalidLoginMessage.contentEquals(expectedInvalidLoginMessage));
+    }
+
+    @When("a user attempts to login with invalid credentials with username {string} and password {string}")
+    public void a_user_attempts_to_login_with_invalid_credentials_with_username_and_password(String invalidUsername,
+            String invalidPassword) {
+
+                loginPage.usernameTextBox.sendKeys(invalidUsername);
+                loginPage.passwordTextBox.sendKeys(invalidPassword);
+                loginPage.signInButton.click();
+       
     }
 
 }

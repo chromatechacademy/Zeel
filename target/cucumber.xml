@@ -1,9 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="0.001207">
-    <testcase classname="Login Scenarios" name="Invalid Credentials login attempt" time="0.001207">
-        <system-out><![CDATA[Given a teacher is on the CTSMS login page..................................skipped
-When a user attempts to login with invalid credentials such as username "test@fakeemail.com" and password "fakepassword".skipped
-Then user should see message "Invalid Username or Password".................skipped
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="6" time="19.733987">
+    <testcase classname="Login Scenarios" name="Login with valid credentials" time="5.667174">
+        <system-out><![CDATA[Given a teacher is on the CTSMS login page..................................passed
+When the teacher logs in with username "general@teacher.com" and password "123456".passed
+Then the teacher should be succesfully logged in and page title is "Chroma Tech Academy".passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Login Scenarios" name="Invalid Credentials login attempt" time="2.896355">
+        <system-out><![CDATA[Given a teacher is on the CTSMS login page..................................passed
+When a user attempts to login with invalid credentials such as username "test@fakeemail.com" and password "fakepassword".passed
+Then user should see message "Invalid Username or Password".................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Login Scenarios" name="Invalid login with multiple credentials" time="2.726136">
+        <system-out><![CDATA[Given a teacher is on the CTSMS login page..................................passed
+When a user attempts to login with invalid credentials with username "test@email.com" and password "123456".passed
+Then user should see message "Invalid Username or Password".................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Login Scenarios" name="Invalid login with multiple credentials 2" time="2.7257">
+        <system-out><![CDATA[Given a teacher is on the CTSMS login page..................................passed
+When a user attempts to login with invalid credentials with username "test1@email.com" and password "123456".passed
+Then user should see message "Invalid Username or Password".................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Login Scenarios" name="Invalid login with multiple credentials 3" time="2.943244">
+        <system-out><![CDATA[Given a teacher is on the CTSMS login page..................................passed
+When a user attempts to login with invalid credentials with username "test2@email.com" and password "123456".passed
+Then user should see message "Invalid Username or Password".................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Login Scenarios" name="Invalid login with multiple credentials 4" time="2.775378">
+        <system-out><![CDATA[Given a teacher is on the CTSMS login page..................................passed
+When a user attempts to login with invalid credentials with username "testingFakeusername" and password "scadsadsdc".passed
+Then user should see message "Invalid Username or Password".................passed
 ]]></system-out>
     </testcase>
 </testsuite>

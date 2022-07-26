@@ -3,12 +3,105 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-07-26T00:00:50.360Z",
+        "start_timestamp": "2022-07-26T00:41:07.443Z",
         "before": [
           {
             "result": {
-              "duration": 117208,
-              "status": "skipped"
+              "duration": 1557890625,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.start()"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "Login with valid credentials",
+        "description": "",
+        "id": "login-scenarios;login-with-valid-credentials",
+        "after": [
+          {
+            "result": {
+              "duration": 162858500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.end()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1275941209,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "a teacher is on the CTSMS login page",
+            "match": {
+              "location": "LoginStepDef.a_teacher_is_on_the_CTSMS_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2665058333,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the teacher logs in with username \"general@teacher.com\" and password \"123456\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"general@teacher.com\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"123456\"",
+                  "offset": 69
+                }
+              ],
+              "location": "LoginStepDef.the_teacher_logs_in_with_username_and_password(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4233083,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the teacher should be succesfully logged in and page title is \"Chroma Tech Academy\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Chroma Tech Academy\"",
+                  "offset": 62
+                }
+              ],
+              "location": "LoginStepDef.the_teacher_should_be_succesfully_logged_in_and_page_title_is(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@chroma"
+          },
+          {
+            "name": "@Smoke"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-07-26T00:41:13.111Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1161497167,
+              "status": "passed"
             },
             "match": {
               "location": "Hooks.start()"
@@ -22,8 +115,8 @@
         "after": [
           {
             "result": {
-              "duration": 2250,
-              "status": "skipped"
+              "duration": 132786584,
+              "status": "passed"
             },
             "match": {
               "location": "Hooks.end()"
@@ -35,8 +128,8 @@
         "steps": [
           {
             "result": {
-              "duration": 11416,
-              "status": "skipped"
+              "duration": 1132088083,
+              "status": "passed"
             },
             "line": 14,
             "name": "a teacher is on the CTSMS login page",
@@ -47,8 +140,8 @@
           },
           {
             "result": {
-              "duration": 3084,
-              "status": "skipped"
+              "duration": 454474208,
+              "status": "passed"
             },
             "line": 15,
             "name": "a user attempts to login with invalid credentials such as username \"test@fakeemail.com\" and password \"fakepassword\"",
@@ -69,8 +162,8 @@
           },
           {
             "result": {
-              "duration": 2542,
-              "status": "skipped"
+              "duration": 15377334,
+              "status": "passed"
             },
             "line": 16,
             "name": "user should see message \"Invalid Username or Password\"",
@@ -91,7 +184,379 @@
             "name": "@chroma"
           },
           {
-            "name": "@Progression"
+            "name": "@Smoke"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-07-26T00:41:16.008Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1064001375,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.start()"
+            }
+          }
+        ],
+        "line": 26,
+        "name": "Invalid login with multiple credentials",
+        "description": "",
+        "id": "login-scenarios;invalid-login-with-multiple-credentials;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 117242666,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.end()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1087013875,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "a teacher is on the CTSMS login page",
+            "match": {
+              "location": "LoginStepDef.a_teacher_is_on_the_CTSMS_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 443682083,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "a user attempts to login with invalid credentials with username \"test@email.com\" and password \"123456\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"test@email.com\"",
+                  "offset": 64
+                },
+                {
+                  "val": "\"123456\"",
+                  "offset": 94
+                }
+              ],
+              "location": "LoginStepDef.a_user_attempts_to_login_with_invalid_credentials_with_username_and_password(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 14088208,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "user should see message \"Invalid Username or Password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid Username or Password\"",
+                  "offset": 24
+                }
+              ],
+              "location": "LoginStepDef.user_should_see_message(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@chroma"
+          },
+          {
+            "name": "@Smoke"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-07-26T00:41:18.734Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1052205750,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.start()"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "Invalid login with multiple credentials",
+        "description": "",
+        "id": "login-scenarios;invalid-login-with-multiple-credentials;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 110430125,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.end()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1118122583,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "a teacher is on the CTSMS login page",
+            "match": {
+              "location": "LoginStepDef.a_teacher_is_on_the_CTSMS_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 429613125,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "a user attempts to login with invalid credentials with username \"test1@email.com\" and password \"123456\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"test1@email.com\"",
+                  "offset": 64
+                },
+                {
+                  "val": "\"123456\"",
+                  "offset": 95
+                }
+              ],
+              "location": "LoginStepDef.a_user_attempts_to_login_with_invalid_credentials_with_username_and_password(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 15200833,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "user should see message \"Invalid Username or Password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid Username or Password\"",
+                  "offset": 24
+                }
+              ],
+              "location": "LoginStepDef.user_should_see_message(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@chroma"
+          },
+          {
+            "name": "@Smoke"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-07-26T00:41:21.460Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1137532708,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.start()"
+            }
+          }
+        ],
+        "line": 28,
+        "name": "Invalid login with multiple credentials",
+        "description": "",
+        "id": "login-scenarios;invalid-login-with-multiple-credentials;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 125313708,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.end()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1180854334,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "a teacher is on the CTSMS login page",
+            "match": {
+              "location": "LoginStepDef.a_teacher_is_on_the_CTSMS_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 482608916,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "a user attempts to login with invalid credentials with username \"test2@email.com\" and password \"123456\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"test2@email.com\"",
+                  "offset": 64
+                },
+                {
+                  "val": "\"123456\"",
+                  "offset": 95
+                }
+              ],
+              "location": "LoginStepDef.a_user_attempts_to_login_with_invalid_credentials_with_username_and_password(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 16823917,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "user should see message \"Invalid Username or Password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid Username or Password\"",
+                  "offset": 24
+                }
+              ],
+              "location": "LoginStepDef.user_should_see_message(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@chroma"
+          },
+          {
+            "name": "@Smoke"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-07-26T00:41:24.403Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1014166042,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.start()"
+            }
+          }
+        ],
+        "line": 29,
+        "name": "Invalid login with multiple credentials",
+        "description": "",
+        "id": "login-scenarios;invalid-login-with-multiple-credentials;;5",
+        "after": [
+          {
+            "result": {
+              "duration": 109211542,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.end()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1168904208,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "a teacher is on the CTSMS login page",
+            "match": {
+              "location": "LoginStepDef.a_teacher_is_on_the_CTSMS_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 466996583,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "a user attempts to login with invalid credentials with username \"testingFakeusername\" and password \"scadsadsdc\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"testingFakeusername\"",
+                  "offset": 64
+                },
+                {
+                  "val": "\"scadsadsdc\"",
+                  "offset": 99
+                }
+              ],
+              "location": "LoginStepDef.a_user_attempts_to_login_with_invalid_credentials_with_username_and_password(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 15910833,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "user should see message \"Invalid Username or Password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid Username or Password\"",
+                  "offset": 24
+                }
+              ],
+              "location": "LoginStepDef.user_should_see_message(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@chroma"
+          },
+          {
+            "name": "@Smoke"
           }
         ]
       }
