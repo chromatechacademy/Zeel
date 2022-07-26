@@ -3,12 +3,12 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-07-25T23:46:54.222Z",
+        "start_timestamp": "2022-07-26T00:00:50.360Z",
         "before": [
           {
             "result": {
-              "duration": 2405806208,
-              "status": "passed"
+              "duration": 117208,
+              "status": "skipped"
             },
             "match": {
               "location": "Hooks.start()"
@@ -22,8 +22,8 @@
         "after": [
           {
             "result": {
-              "duration": 107286667,
-              "status": "passed"
+              "duration": 2250,
+              "status": "skipped"
             },
             "match": {
               "location": "Hooks.end()"
@@ -35,8 +35,8 @@
         "steps": [
           {
             "result": {
-              "duration": 1476869375,
-              "status": "passed"
+              "duration": 11416,
+              "status": "skipped"
             },
             "line": 14,
             "name": "a teacher is on the CTSMS login page",
@@ -47,8 +47,8 @@
           },
           {
             "result": {
-              "duration": 463188583,
-              "status": "passed"
+              "duration": 3084,
+              "status": "skipped"
             },
             "line": 15,
             "name": "a user attempts to login with invalid credentials such as username \"test@fakeemail.com\" and password \"fakepassword\"",
@@ -66,6 +66,24 @@
               "location": "LoginStepDef.a_user_attempts_to_login_with_invalid_credentials_such_as_username_and_password(String,String)"
             },
             "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2542,
+              "status": "skipped"
+            },
+            "line": 16,
+            "name": "user should see message \"Invalid Username or Password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid Username or Password\"",
+                  "offset": 24
+                }
+              ],
+              "location": "LoginStepDef.user_should_see_message(String)"
+            },
+            "keyword": "Then "
           }
         ],
         "tags": [

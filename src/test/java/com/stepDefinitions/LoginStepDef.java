@@ -49,4 +49,12 @@ public class LoginStepDef {
 
     }
 
+    @Then("user should see message {string}")
+    public void user_should_see_message(String expectedInvalidLoginMessage) {
+
+        String actualInvalidLoginMessage = loginPage.invalidUsernameOrPasswordMessage.getText();
+
+        System.out.println(actualInvalidLoginMessage);
+    }
+
 }

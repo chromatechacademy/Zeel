@@ -18,7 +18,7 @@ formatter.scenario({
   ]
 });
 formatter.before({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "a teacher is on the CTSMS login page",
@@ -28,7 +28,7 @@ formatter.match({
   "location": "LoginStepDef.a_teacher_is_on_the_CTSMS_login_page()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
   "name": "a user attempts to login with invalid credentials such as username \"test@fakeemail.com\" and password \"fakepassword\"",
@@ -38,9 +38,19 @@ formatter.match({
   "location": "LoginStepDef.a_user_attempts_to_login_with_invalid_credentials_such_as_username_and_password(String,String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
+});
+formatter.step({
+  "name": "user should see message \"Invalid Username or Password\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LoginStepDef.user_should_see_message(String)"
+});
+formatter.result({
+  "status": "skipped"
 });
 formatter.after({
-  "status": "passed"
+  "status": "skipped"
 });
 });
