@@ -13,11 +13,11 @@ import cucumber.api.junit.Cucumber;
         "pretty" }, 
         features = "src/test/java/com/features", 
         glue = "com.stepDefinitions", 
-        tags = "@Smoke", 
+        tags = "@TC2", 
         dryRun = false, 
-        monochrome = true, 
+        monochrome = false, 
         strict = true)
 
-public class RunSmokeTest {
+public class Runners {
     // DO NOT WRITE ANYTHING INSIDE THE CLASS
 }
