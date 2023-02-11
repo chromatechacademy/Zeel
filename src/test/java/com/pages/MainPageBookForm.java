@@ -24,19 +24,33 @@ public class MainPageBookForm {
   @FindBy(xpath = "//input[@placeholder='Phone']")
   public WebElement phoneBookBox;
 
-
-
   /** Book button */
   @FindBy(xpath = "//button[normalize-space()='Book']")
   public WebElement bookButton;
 
-  /** First day at booking calendar */
-  @FindBy(xpath = "//body[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]/div[5]/div[2]/div[1]/div[2]")
-  public WebElement firstDay;
+  /** Before first day at booking calendar 3 should be 5*/
+  @FindBy(xpath = "(((//div[@class='rbc-month-view']/div)[5]/div)[1]/div)[1]")
+  public WebElement beforeFirstDayBox;
 
   /** Last day at booking calendar */
-  @FindBy(xpath = "//*[@id='root']/div/div/div[4]/div/div[2]/div[2]/div/div[2]/div[5]/div[2]/div/div[3]")
-  public WebElement lastDay;
+  @FindBy(xpath = "(((//div[@class='rbc-month-view']/div)[5]/div)[1]/div)[3]")
+  public WebElement lastDayBox;
+
+  /** Booking success text */
+  @FindBy(xpath="//div/br/following-sibling::h3")
+  public WebElement bookingSuccessText;
+
+  /** Booking success confirmation text */
+  @FindBy(xpath="(//div/br/following-sibling::p)[1]")
+  public WebElement bookingConfirmedText;
+
+  /** Booking success dates text */
+  @FindBy(xpath = "(//div/br/following-sibling::p)[2]")
+  public WebElement bookingDatesText;
+
+  /** Booking success close button */
+  @FindBy(xpath = "//button[contains(text(),'Close')]")
+  public WebElement bookingConfirmationCloseButton;
 
   public MainPageBookForm() {
     PageFactory.initElements(WebDriverUtils.driver, this);

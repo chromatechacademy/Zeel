@@ -37,19 +37,19 @@ public class MainPageContactForm {
     public WebElement submitButton;
 
     /** Thanks text box */
-    @FindBy(xpath = "//*[@id='root']/div[2]/div/div[5]/div[2]/div/h2/text()[1]")
+    @FindBy(xpath = "//*[@class='row contact']/div/div/h2")
     public WebElement thanksForGetingInTouchTextBox;
 
     /** Will get back text box */
-    @FindBy(xpath = "/html/body/div/div[2]/div/div[5]/div[2]/div/p[1]")
+    @FindBy(xpath = "(//*[@class='row contact']/div/div/p)[1]")
     public WebElement willGetBackTextBox;
 
     /** Subject string text box */
-    @FindBy(xpath = "/html/body/div/div[2]/div/div[5]/div[2]/div/p[2]")
+    @FindBy(xpath = "(//*[@class='row contact']/div/div/p)[2]")
     public WebElement subjectStringTextBox;
 
     /** ASAP Text box */
-    @FindBy(xpath = "/html/body/div/div[2]/div/div[5]/div[2]/div/p[3]")
+    @FindBy(xpath = "(//*[@class='row contact']/div/div/p)[3]")
     public WebElement asapTextBox;
 
     /** Room section */

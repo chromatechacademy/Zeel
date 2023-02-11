@@ -13,11 +13,11 @@ Feature: Book the room for single night
         And the  user selects single night
         And the user fills out the following fields "<Firstname>", "<Lastname>", "<Email>", "<Phone>"
         And the user clicks on Book button
-        Then  the message is displayed on the confirmation modal "Booking Successful!", 'Congratulations! Your booking has been confirmed for:', "<Booked dates>"
+        Then the message is displayed on the confirmation modal "Booking Successful!", 'Congratulations! Your booking has been confirmed for:', "<Booked dates>"
 
         Examples:
-            | Firstname | Lastname | Email                 | Phone        |
-            | Grace     | Hopper   | grace.hopper@zeel.com | 347-555-9898 |
+            | Firstname | Lastname | Email                 | Phone        | Booked dates |
+            | Grace     | Hopper   | grace.hopper@zeel.com | 347-555-9898 | 2023-02-20 - 2023-02-22 |
 
 
 

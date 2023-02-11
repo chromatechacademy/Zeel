@@ -11,7 +11,7 @@ Feature: Submit contact form
         When a user scrolls down to the contact form section
         And a user fills out the following fields "<Name>", "<Email>", "<Phone>", "<Subject>", "<Message>"
         And a user clicks on the Submit button
-        Then the message is displayed "Thanks for getting in touch <Name>!", "We'll get back to you about", "<Message>", "as soon as possible."
+        Then the message is displayed "Thanks for getting in touch <Name>!", "We'll get back to you about", "<Subject>", "as soon as possible."
 
         Examples:
             | Name         | Email                 | Phone        | Subject        | Message               |
